@@ -11,7 +11,7 @@ const config: Configuration = new Configuration({
 app.get('/', async (req, res) => {
     const userService: UserServiceApi = new UserServiceApi(config);
     const { data } = await userService.login("admin", "!HansHans")
-    res.send('Login result: ' + data + JSON.stringify(data))
+    res.send('Login result: ' + JSON.stringify(data))
 })
 
 app.listen(port, () => {
