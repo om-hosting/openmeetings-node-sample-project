@@ -1,3 +1,6 @@
 .idea/
 node_modules/
-dist/
+# Ignore built ts files
+dist/**/*
+# Ignore generated javascript
+src/app.js
