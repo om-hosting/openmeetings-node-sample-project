@@ -3,7 +3,7 @@
 This project illustrates how to use the https://www.npmjs.com/package/openmeetings-node-client 
 In order to integrate with https://openmeetings.apache.org/
 
-This project is using TypeScript and exposes an API using the Express Framework
+This project is using TypeScript and exposes an API using the Express Framework.
 
 ## Running this project
 
