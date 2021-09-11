@@ -13,6 +13,7 @@ const config: Configuration = new Configuration({
 
 app.get('/', async (req, res) => {
     const userService: UserServiceApi = new UserServiceApi(config);
+    // *****************
     // 1. Login to service
     const loginResult: ServiceResult = await userService.login("admin", "!HansHans").then(value => {
         return {
@@ -32,6 +33,7 @@ app.get('/', async (req, res) => {
         res.send('Login failed, result: ' + JSON.stringify(loginResult))
         return
     }
+    // *****************
     // 2. Generate Hash for entering a conference room
     const sessionId: string = loginResult.message;
 
@@ -61,6 +63,7 @@ app.get('/', async (req, res) => {
     });
     console.log("hashResult", hashResult);
     if (hashResult.type === "SUCCESS") {
+        // *****************
         // 3. Construct Login URL
         const loginUrl: string = `${BASE_URL}/hash?secure=${hashResult.message}`
         res.send(`Click URL to login <a href="${loginUrl}">${loginUrl}`)
