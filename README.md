@@ -1,9 +1,17 @@
-## Sample project for OpenMeetings API
+## Sample project for OpenMeetings API using TypeScript
 
 This project illustrates how to use the https://www.npmjs.com/package/openmeetings-node-client 
 In order to integrate with https://openmeetings.apache.org/
 
 This project is using TypeScript and exposes an API using the Express Framework.
+
+If you looking for the JavaScript/ES6 version see: https://github.com/om-hosting/openmeetings-node-js-sample-project
+
+## Use cases and setting up OpenMeetings
+
+The plugin assumes you have an OpenMeetings Conference Server running.
+
+You can find an example use case at https://om-hosting.com/openmeetings-integration-nodejs/
 
 ## Running this project
 
