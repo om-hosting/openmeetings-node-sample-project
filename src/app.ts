@@ -15,13 +15,9 @@ app.get('/', async (req, res) => {
     const userService: UserServiceApi = new UserServiceApi(config);
     // *****************
     // 1. Login to service
-    const loginResult: ServiceResult = await userService.login("admin", "!HansHans").then(value => {
-        return {
-            // @ts-ignore
-            message: value.data.serviceResult.message,
-            // @ts-ignore
-            type: value.data.serviceResult.type
-        };
+    const loginResult: ServiceResult = await userService.login("soapuser", "!HansHans1").then(value => {
+        // @ts-ignore
+        return value.data.serviceResult;
     }).catch(error => {
         console.log(error);
         return {
@@ -48,12 +44,8 @@ app.get('/', async (req, res) => {
         roomId: 1,
         moderator: true
     }).then(value => {
-        return {
-            // @ts-ignore
-            message: value.data.serviceResult.message,
-            // @ts-ignore
-            type: value.data.serviceResult.type
-        };
+        // @ts-ignore
+        return value.data.serviceResult;
     }).catch(error => {
         console.log(error.message);
         return {
